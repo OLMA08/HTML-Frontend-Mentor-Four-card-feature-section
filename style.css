@@ -1,0 +1,159 @@
+:root {
+--red: hsl(0, 78%, 62%);
+--cyan: hsl(180, 62%, 55%);
+--orange: hsl(34, 97%, 64%);
+--blue: hsl(212, 86%, 64%);
+
+--verydark-blue: hsl(234, 12%, 34%);
+--grayish-blue: hsl(229, 6%, 66%);
+--verylight-gray: hsl(0, 0%, 98%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size: 15px;
+    background-color: var(--verylight-gray);
+    color:var(--grayish-blue);
+}
+.container {
+   
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 30px;
+}
+header {
+    
+/*text h1 und h2 werden zetriert*/
+    text-align: center; 
+}
+h2 {
+    font-size: 34px;
+    font-weight: 200;
+    font-variant: var(--verydark-blue);
+}
+h1 {
+    font-size: 34px;
+    font-weight: 600;
+    color: var(--verydark-blue);
+}
+p {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+    margin-top: 60px;
+}
+.box1 {
+    background: #fff;
+    border-radius: 7px;
+    padding: 30px;
+    text-align: right;
+    border-top: 4px solid var(--cyan)
+}
+.box1:hover h3 {
+    cursor: pointer;
+    color: var(--cyan);
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+    transform-origin: left;
+}
+
+.box2 {
+    background: #fff;
+    border-radius: 7px;
+    padding: 30px;
+    text-align: right;
+    border-top: 4px solid var(--red);
+}
+.box2:hover h3 {
+    cursor: pointer;
+    color: var(--red);
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+    transform-origin: left;
+}
+.box3 {
+    background: #fff;
+    border-radius: 7px;
+    padding: 30px;
+    text-align: right;
+    border-top: 4px solid var(--orange);
+}
+.box3:hover h3 {
+    cursor: pointer;
+    color: var(--orange);
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+    transform-origin: left;
+}
+.box4 {
+    background: #fff;
+    border-radius: 7px;
+    padding: 30px;
+    text-align: right;
+    border-top: 4px solid var(--blue);
+    
+}
+.box4:hover h3 {
+    cursor: pointer;
+    color: var(--blue);
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+    transform-origin: left;
+}
+.box-text {
+    text-align: left;
+    padding-bottom: 50px;
+}
+.box-text h3 {
+    font-size: 20px;
+    color: var(--verydark-blue);
+    margin-bottom: 10px;
+}
+
+.box-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.box1, .box4 {
+    align-self: center;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .main {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media only screen and (max-width: 425px) {
+    body {
+      font-size: 13px;
+    }
+  
+    header h2 {
+      font-size: 22px;
+    }
+  
+    header h3 {
+      font-size: 22px;
+    }
+  
+    .box {
+      padding: 20px;
+    }
+  
+    .box-text {
+      padding-bottom: 30px;
+    }
+  }
